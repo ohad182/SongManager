@@ -1,0 +1,218 @@
+object frmMain: TfrmMain
+  Left = 0
+  Height = 540
+  Top = 0
+  Width = 492
+  Caption = 'SongManager v1.0  —  Cakewalk 3.0 Playlist Wrapper'
+  ClientHeight = 540
+  ClientWidth = 492
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  object txtSearch: TEdit
+    Left = 8
+    Height = 25
+    Top = 8
+    Width = 390
+    TabOrder = 0
+    OnChange = txtSearchChange
+    OnKeyDown = txtSearchKeyDown
+  end
+  object lblSearchHint: TLabel
+    Left = 404
+    Height = 20
+    Top = 12
+    Width = 80
+    Caption = 'Search:'
+  end
+  object lstSongs: TListBox
+    Left = 8
+    Height = 360
+    Top = 40
+    Width = 476
+    ItemHeight = 20
+    TabOrder = 1
+    OnDblClick = lstSongsDblClick
+  end
+  object lblStatus: TLabel
+    Left = 8
+    Height = 22
+    Top = 408
+    Width = 476
+    Caption = 'Cakewalk: NOT FOUND'
+    BorderSpacing.Around = 2
+  end
+  object btnPlay: TButton
+    Left = 8
+    Height = 32
+    Top = 438
+    Width = 72
+    Caption = 'PLAY'
+    TabOrder = 2
+    OnClick = btnPlayClick
+  end
+  object btnStop: TButton
+    Left = 84
+    Height = 32
+    Top = 438
+    Width = 72
+    Caption = 'STOP'
+    TabOrder = 3
+    OnClick = btnStopClick
+  end
+  object btnPause: TButton
+    Left = 160
+    Height = 32
+    Top = 438
+    Width = 72
+    Caption = 'PAUSE'
+    TabOrder = 4
+    OnClick = btnPauseClick
+  end
+  object btnNext: TButton
+    Left = 236
+    Height = 32
+    Top = 438
+    Width = 72
+    Caption = 'NEXT >'
+    TabOrder = 5
+    OnClick = btnNextClick
+  end
+  object btnTrMinus: TButton
+    Left = 316
+    Height = 32
+    Top = 438
+    Width = 52
+    Caption = 'Tr -'
+    TabOrder = 6
+    OnClick = btnTrMinusClick
+  end
+  object lblTranspose: TLabel
+    Left = 372
+    Height = 32
+    Top = 438
+    Width = 36
+    Alignment = taCenter
+    Caption = ' 0'
+  end
+  object btnTrPlus: TButton
+    Left = 412
+    Height = 32
+    Top = 438
+    Width = 72
+    Caption = 'Tr +'
+    TabOrder = 7
+    OnClick = btnTrPlusClick
+  end
+  object btnAdd: TButton
+    Left = 8
+    Height = 26
+    Top = 478
+    Width = 58
+    Caption = 'Add'
+    TabOrder = 8
+    OnClick = btnAddClick
+  end
+  object btnDelete: TButton
+    Left = 70
+    Height = 26
+    Top = 478
+    Width = 58
+    Caption = 'Delete'
+    TabOrder = 9
+    OnClick = btnDeleteClick
+  end
+  object btnDelay: TButton
+    Left = 132
+    Height = 26
+    Top = 478
+    Width = 58
+    Caption = 'Delay'
+    TabOrder = 10
+    OnClick = btnDelayClick
+  end
+  object btnClear: TButton
+    Left = 194
+    Height = 26
+    Top = 478
+    Width = 72
+    Caption = 'Clear List'
+    TabOrder = 11
+    OnClick = btnClearClick
+  end
+  object btnLoadDB: TButton
+    Left = 270
+    Height = 26
+    Top = 478
+    Width = 64
+    Caption = 'Load DB'
+    TabOrder = 12
+    OnClick = btnLoadDBClick
+  end
+  object btnLoadSet: TButton
+    Left = 338
+    Height = 26
+    Top = 478
+    Width = 68
+    Caption = 'Load Set'
+    TabOrder = 13
+    OnClick = btnLoadSetClick
+  end
+  object btnSaveSet: TButton
+    Left = 410
+    Height = 26
+    Top = 478
+    Width = 68
+    Caption = 'Save Set'
+    TabOrder = 14
+    OnClick = btnSaveSetClick
+  end
+  object btnFontPlus: TButton
+    Left = 8
+    Height = 26
+    Top = 512
+    Width = 66
+    Caption = 'Font +'
+    TabOrder = 15
+    OnClick = btnFontPlusClick
+  end
+  object btnFontMinus: TButton
+    Left = 78
+    Height = 26
+    Top = 512
+    Width = 66
+    Caption = 'Font -'
+    TabOrder = 16
+    OnClick = btnFontMinusClick
+  end
+  object chkFullPath: TCheckBox
+    Left = 150
+    Height = 26
+    Top = 512
+    Width = 130
+    Caption = 'Show Full Path'
+    TabOrder = 17
+    OnClick = chkFullPathClick
+  end
+  object tmrPoll: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = tmrPollTimer
+    Left = 300
+    Top = 512
+  end
+  object tmrConnect: TTimer
+    Enabled = False
+    Interval = 2000
+    OnTimer = tmrConnectTimer
+    Left = 360
+    Top = 512
+  end
+  object dlgOpen: TOpenDialog
+    Left = 420
+    Top = 512
+  end
+  object dlgSave: TSaveDialog
+    Left = 454
+    Top = 512
+  end
+end
